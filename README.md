@@ -1,6 +1,6 @@
-# Python Template
+# Astrobot
 
-This is a template for Python projects. It includes everything needed for a project.
+This is a Discord bot for my college course's Discord server
 
 ## Requirements
 
@@ -28,7 +28,5 @@ If any of the hooks fail to run, the commit will be aborted. You can run the hoo
 ## Contributions
 
 Contributions are welcome. Please open an issue or pull request if you have any suggestions or improvements.
-
-Pull requests should be made to the `develop` branch. Pull requests to `main` will be rejected.
 
 Before committing, please make sure to run the pre-commit hooks which can be installed with `poetry run pre-commit install`. You can run them manually by running `poetry run pre-commit run --all-files`.
