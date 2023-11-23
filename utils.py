@@ -19,7 +19,7 @@ async def create_embed(
 async def handle_error(
     interaction: discord.Interaction,
     error,
-    ephemeral=True,
+    ephemeral=False,
 ):
     if isinstance(error, commands.CommandOnCooldown):
         await interaction.response.send_message(
@@ -41,6 +41,8 @@ async def handle_error(
         )
     else:
         await interaction.response.send_message(
-            embed=await create_embed(description="Something went wrong"),
+            embed=await create_embed(
+                description=f"Something went wrong\n```{error}```"
+            ),
             ephemeral=ephemeral,
         )
