@@ -33,6 +33,7 @@ client = Client()
 db_client = MongoClient(os.environ["MONGO_URI"], server_api=ServerApi("1"))
 db = db_client.data
 journals_collection = db.journals
+user_collection = db.users
 
 client.tree.on_error = handle_error
 client.on_error = handle_error  # type: ignore
@@ -83,7 +84,7 @@ async def ping(interaction: Interaction):
 @client.tree.command(name="journal-create", description="Create a journal")
 async def journal_create(interaction: Interaction, channel_name: str = None):
     if current_journal := journals_collection.find_one(
-        {"user_id": interaction.user.id}
+        {"user_id": str(interaction.user.id)}
     ):
         channel = interaction.guild.get_channel(current_journal["channel_id"])
         await interaction.response.send_message(
@@ -108,8 +109,8 @@ async def journal_create(interaction: Interaction, channel_name: str = None):
         # add to db
         journals_collection.insert_one(
             {
-                "user_id": interaction.user.id,
-                "channel_id": channel.id,
+                "user_id": str(interaction.user.id),
+                "channel_id": str(channel.id),
             }
         )
         await interaction.response.send_message(
