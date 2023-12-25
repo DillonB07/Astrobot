@@ -478,6 +478,7 @@ files = [
     {file = "pymongo-4.6.0-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:8ab6bcc8e424e07c1d4ba6df96f7fb963bcb48f590b9456de9ebd03b88084fe8"},
     {file = "pymongo-4.6.0-cp312-cp312-win32.whl", hash = "sha256:47aa128be2e66abd9d1a9b0437c62499d812d291f17b55185cb4aa33a5f710a4"},
     {file = "pymongo-4.6.0-cp312-cp312-win_amd64.whl", hash = "sha256:014e7049dd019a6663747ca7dae328943e14f7261f7c1381045dfc26a04fa330"},
+    {file = "pymongo-4.6.0-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:e24025625bad66895b1bc3ae1647f48f0a92dd014108fb1be404c77f0b69ca67"},
     {file = "pymongo-4.6.0-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:288c21ab9531b037f7efa4e467b33176bc73a0c27223c141b822ab4a0e66ff2a"},
     {file = "pymongo-4.6.0-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:747c84f4e690fbe6999c90ac97246c95d31460d890510e4a3fa61b7d2b87aa34"},
     {file = "pymongo-4.6.0-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:055f5c266e2767a88bb585d01137d9c7f778b0195d3dbf4a487ef0638be9b651"},
@@ -660,14 +661,14 @@ testing-integration = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "jar
 
 [[package]]
 name = "sourcery"
-version = "1.14.0"
+version = "1.15.0"
 description = "Magically refactor Python"
 optional = false
 python-versions = "*"
 files = [
-    {file = "sourcery-1.14.0-py2.py3-none-macosx_10_9_universal2.whl", hash = "sha256:208dbf69e0c3b145bbb18a3f7d082a849cc61ac7b51df323291ccddc92025433"},
-    {file = "sourcery-1.14.0-py2.py3-none-manylinux1_x86_64.whl", hash = "sha256:12a79c93f8f7baddde77678d7a69b81cdea51e4ceafa8d6be5caf21b66eb71f8"},
-    {file = "sourcery-1.14.0-py2.py3-none-win_amd64.whl", hash = "sha256:15b056baae7440319e3866ff0e524484d4899665c0669c7b20044e4d7869204a"},
+    {file = "sourcery-1.15.0-py2.py3-none-macosx_10_9_universal2.whl", hash = "sha256:5d8ab8f61d0a55418b5debb999f76538d8e946a9a69a9e0be66593c1e17ff20f"},
+    {file = "sourcery-1.15.0-py2.py3-none-manylinux1_x86_64.whl", hash = "sha256:5c2d7723b7c1bbd3a904fa2d85ef074b9ef1091c917a4e8c57a88b70bcda0699"},
+    {file = "sourcery-1.15.0-py2.py3-none-win_amd64.whl", hash = "sha256:ab3438770f4f1535a2a4d872f5a84d12773eeb00825b96a5f2ed321ec3912b5e"},
 ]
 
 [[package]]
@@ -796,4 +797,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "7c2fc2c4f59f2d73a9d446fb1b63c6c11e9e171dba89b83241b3f246301d9c06"
+content-hash = "ce638ae4116523f4912a40859b986e6fb494f460b5e5c526f56c53a9ba78f397"
