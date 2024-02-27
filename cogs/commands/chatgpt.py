@@ -10,7 +10,7 @@ from discord.ext.commands import (
     Bot,
     Context,
 )
-import textwrap 
+import textwrap
 from typing import Any, Callable, Coroutine, Iterable, ParamSpec, Tuple, TypeAlias
 
 import os

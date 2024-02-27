@@ -249,9 +249,7 @@ EXTENSIONS = [
 intents = Intents.all()
 
 bot = Bot(
-    command_prefix=when_mentioned_or('!'),
-    description=DESCRIPTION,
-    intents=intents
+    command_prefix=when_mentioned_or("!"), description=DESCRIPTION, intents=intents
 )
 
 
@@ -271,7 +269,7 @@ async def on_ready():
 
 async def main():
     logging.basicConfig(
-        level=logging.getLevelName('WARNING'),
+        level=logging.getLevelName("WARNING"),
         format="[%(asctime)s] [%(name)s] [%(levelname)s] %(message)s",
         handlers=[
             logging.FileHandler("apollo.log"),
@@ -286,7 +284,7 @@ async def main():
                 await bot.load_extension(extension)
             except Exception as e:
                 logging.exception("Failed to load extension {extension}", exc_info=e)
-        await bot.start(os.environ['BOT_TOKEN'])
+        await bot.start(os.environ["BOT_TOKEN"])
 
 
 @bot.command()
