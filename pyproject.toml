@@ -1,23 +1,58 @@
-[tool.poetry]
-name = "pythontemplate"
-version = "0.1.0"
-description = ""
-authors = ["Dillon <dillonb07dev@gmail.com>"]
-license = "MIT"
-readme = "README.md"
+[tool.black]
+line-length = 88
+target_version = ['py310']
+include = '\.pyi?$'
+exclude = '''
 
-[tool.poetry.dependencies]
-python = "^3.9"
-discord-py = "^2.3.2"
-python-dotenv = "^1.0.0"
-pymongo = "^4.6.0"
-openai = "^1.12.0"
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | env
+    | _build
+    | buck-out
+    | build
+    | dist
+    | .venv
+    | venv
+  )/
+)
+'''
 
-[tool.poetry.group.dev.dependencies]
-ruff = "^0.1.6"
-pre-commit = "^3.5.0"
-sourcery = "^1.14.0"
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra"
+testpaths = ["tests"]
+python_files = "test_*.py"
+
+[tool.pyright]
+pythonVersion = "3.10"
+pythonPlatform = "Linux"
+ignore = [
+  "cogs/**/*",               # everything, cut this down over time
+  "karma/**/*",
+  "migrations/versions",
+  "utils/announce_utils.py",
+  "roll/**/*",
+  "tests/**/*",
+  "voting/**/*",
+  "utils/custom_help.py",
+]
+# https://microsoft.github.io/pyright/#/configuration?id=diagnostic-rule-defaults
+
+typeCheckingMode = "strict"
+useLibraryCodeForTypes = true
+reportMissingTypeStubs = false
+reportImportCycles = false         # this is actually a big issue but the bad module structure makes it hard to resolve
+reportMissingParameterType = false
+
+[tool.ruff]
+target-version = "py310"
+select = ["E", "F", "I"] # defaults plus isort
+ignore = ["E501"]
+
+exclude = ["migrations/versions/*", "models/__init__.py"]
