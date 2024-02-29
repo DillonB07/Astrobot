@@ -33,22 +33,24 @@ python_files = "test_*.py"
 pythonVersion = "3.10"
 pythonPlatform = "Linux"
 ignore = [
-  "cogs/**/*",               # everything, cut this down over time
-  "karma/**/*",
-  "migrations/versions",
-  "utils/announce_utils.py",
-  "roll/**/*",
-  "tests/**/*",
-  "voting/**/*",
-  "utils/custom_help.py",
+    "cogs/**/*",               # everything, cut this down over time
+    "karma/**/*",
+    "migrations/versions",
+    "utils/announce_utils.py",
+    "roll/**/*",
+    "tests/**/*",
+    "voting/**/*",
+    "utils/custom_help.py",
 ]
 # https://microsoft.github.io/pyright/#/configuration?id=diagnostic-rule-defaults
 
 typeCheckingMode = "strict"
 useLibraryCodeForTypes = true
 reportMissingTypeStubs = false
-reportImportCycles = false         # this is actually a big issue but the bad module structure makes it hard to resolve
+reportImportCycles = false                                 # this is actually a big issue but the bad module structure makes it hard to resolve
 reportMissingParameterType = false
+venvPath = "/Users/dillonbarnes/.local/share/virtualenvs/"
+venv = "Astrobot-Q7pfBjEv"
 
 [tool.ruff]
 target-version = "py310"
